@@ -31,3 +31,8 @@ $utilities: map-merge(
 .fs-sm{
   font-size: 14px;
 }
+.w-md-50{
+  @include md{
+    width: 60%;
+  }
+}
