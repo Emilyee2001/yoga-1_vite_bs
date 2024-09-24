@@ -1,0 +1,12 @@
+.header-nav-item-style{
+  text-align: center;
+  color: $gray-100;
+  font-weight: $font-weight-light;
+  transition: 0.3s;
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+.header-navbar-toggler{
+  border: 0;
+}

@@ -1,0 +1,36 @@
+.bg-main-banner{
+    background-position: bottom;
+    background-image: url(/assets/images/header.jpeg);
+    height: calc((100vh - 200px));
+}
+.banner-img-classroom-intro{
+    border-radius: 1rem;
+    width: calc((100% - 15px)/2);
+    height: 210px;
+}
+.banner-img-lg-classroom-intro{
+    border-radius: 1rem;
+    height: 266px;
+    @include lg{
+        height: 444px;
+    }
+}
+.banner-img-sm-classroom-intro{
+    border-radius: 1rem;
+    height: 117px;
+    @include lg{
+        height: 207px;
+    }
+}
+.banner-img-course-intro{
+    border-radius: 1rem;
+    height: 165px;
+    width: calc((100% - 15px)/2);
+    @include md{
+        width: calc((100% - 30px)/2);
+        height: 200px;
+    }
+}
+.footer-form-email{
+    width: 380px;
+}

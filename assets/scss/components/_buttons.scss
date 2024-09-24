@@ -1,0 +1,44 @@
+.btn-transparent-style{
+    background-color: transparent;
+    color: $primary-200;
+    font-weight: $font-weight-light;
+    border: 0.5px solid $primary-200;
+    border-radius: 1rem;
+    transition: 0.4s;
+    &:hover{
+        background-color: $primary-100;
+        border: 0.5px solid $primary-200;
+        color: $white;
+    }
+}
+.btn-transparent{
+    padding: 0.5rem 1rem;
+}
+.btn-primary-100-style{
+    background-color: $primary-100;
+    color: $white;
+    border-radius: 4.8px;
+    transition: 0.4s;
+    &:hover{
+        color: $white;
+    }
+}
+.btn-primary-100{
+    padding: 0.5rem 1rem;
+}
+.btn-secondary-100-style{
+    background-color: $secondary-100;
+    color: $gray-100;
+    border-radius: 4.8px;
+    &:hover{
+        color: $gray-100;
+    }
+}
+.btn-secondary-100{
+    padding: 0.5rem 1rem;
+}
+.swiperCardReview-button-prev,
+.swiperCardReview-button-next{
+    font-size: 2.5rem;
+    color: $primary-200;
+}

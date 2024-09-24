@@ -1,0 +1,33 @@
+// api
+$utilities: map-merge(
+  $utilities, (
+    "font-size": map-merge(
+      map-get($utilities, "font-size"),
+      ( responsive: true ),
+    ),
+  )
+);
+
+.bg-secondary-100{
+    background-color: $secondary-100;
+}
+.bg-primary-200{
+  background-color: $primary-200;
+}
+.gap-y-2{
+    gap: 0.5rem 0;
+}
+.gap-y-3{
+    gap: 1rem 0;
+}
+.gap-md-y-7{
+    @include md{
+        gap: 1.875rem 0;
+    }
+}
+.gap-x-7{
+    gap: 0 1.875rem;
+}
+.fs-sm{
+  font-size: 14px;
+}
