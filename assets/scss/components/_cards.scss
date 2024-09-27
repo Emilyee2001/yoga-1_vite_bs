@@ -52,3 +52,16 @@
     border-radius: 1rem;
     padding: 1rem;
 }
+.card-course-level-style{
+    border-radius: 1rem;
+    background-color: $primary-100;
+    color: $white;
+    box-shadow: 0px 3px 6px #00000029;
+    transition: 0.3s;
+    &:hover{
+        filter: brightness(1.06);
+    }
+}
+.card-course-level{
+    padding: 1.5rem;
+}
