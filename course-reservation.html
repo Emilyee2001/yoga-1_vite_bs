@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即預約 - DOYOGA</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <script type="module" crossorigin src="/yoga-1_vite_bs/assets/main-68fd9fd8.js"></script>
+  <link rel="stylesheet" href="/yoga-1_vite_bs/assets/main-067924a1.css">
+</head>
+<body>
+  <header class="bg-secondary-100">
+    <section class="container">
+        <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <h1><a href="index.html"><img class="mb-2" style="width: 96px;" src="data:image/png;base64,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" alt="logo"></a></h1>
+      <button class="navbar-toggler header-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link header-nav-item-style" href="#">課程介紹</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link header-nav-item-style" href="#">瑜珈空間</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link header-nav-item-style" href="#">當月課表</a>
+          </li>
+        </ul>
+        <div class="d-flex flex-column flex-lg-row gap-3">
+            <a href="#" class="btn btn-transparent btn-transparent-style">立即預約</a>
+            <a href="#" class="btn btn-transparent btn-transparent-style">聯絡我們</a>
+        </div>
+        <!-- <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+      </div>
+    </div>
+  </nav>    </section>
+  </header>
+  <section class="container my-8">
+    <article class="d-flex flex-column align-items-center">
+        <h3 class="text-primary-200 fw-normal mb-5">立即預約</h3>
+        <ul class="d-flex gap-x-3">
+            <li class="tag-course-reservation bg-primary-200 text-white">選擇方案</li>
+            <li class="tag-course-reservation bg-secondary-100 text-primary-200">填寫資料</li>
+            <li class="tag-course-reservation bg-secondary-100 text-primary-200">完成預約</li>
+        </ul>
+    </article>
+  </section>
+<!-- course first -->
+  <section class="container my-8">
+    <div class="card card-course-column">
+        <img src="/yoga-1_vite_bs/assets/yoga-11-0a1b25d7.jpg" class="object-fit-cover card-img-top mb-3" alt="course1">
+        <div class="card-body px-5">
+            <h5 class="fs-4 card-title mb-1">首次體驗</h5>
+            <p class="fs-4 text-primary-100 text-center mb-2">NT $450 / 次</p>
+            <p class="card-text">分基礎、中級、高級可以選擇。 <br>初次至 DOYOGA 上課建議選擇此方案。</p>
+        </div>
+        <div class="p-5">
+            <a data-bs-toggle="collapse" href="#collapseCourseFirst" role="button" aria-expanded="false" aria-controls="collapseExample" class="d-block fs-4 btn btn-primary-100 btn-primary-100-style stretched-link">選擇課程</a>
+        </div>
+    </div>
+  </section>
+  <section class="bg-primary-200">
+    <div class="container">
+        <div class="collapse py-6" id="collapseCourseFirst">
+            <h3 class="text-white text-center fw-normal mb-5">選擇課程階級</h3>
+            <div class="d-flex flex-column gap-5">
+                <!-- course first base -->
+                <div class="card-course-level-style card-course-level position-relative">
+                    <a class="fs-3 text-white stretched-link" data-bs-toggle="collapse" href="#collapseCourseFirstBasic" role="button" aria-expanded="false" aria-controls="collapseCourseFirstBasic">基礎 Basic</a>
+                    <div class="d-flex align-items-center mb-3">
+                        <p class="text-white me-3">基礎課程</p>
+                        <span class="rounded-4 bg-primary-200 px-3 py-1 fw-lighter fs-sm">60 min</span>
+                    </div>
+                    <ul>
+                        <li>・入體位法動作解說</li>
+                        <li>・瑜珈基礎動作、順位</li>
+                        <li>・適合任何階段練習者</li>
+                    </ul>
+                </div>
+                <div class="collapse" id="collapseCourseFirstBasic">
+                    <div class="card card-body p-5 rounded-4">
+                        <p>你選擇的是</p>
+                        <h5 class="mb-5">首次體驗課程-基礎</h5>
+                        <p class="fs-4 text-center mb-3">預約須知</p>
+                        <ol class="mb-5">
+                            <li>1. 如果有特殊體質、特殊狀況，請主動告知。</li>
+                            <li>2. 取消預約或時間異動請於預約日前一天晚間 21:00 前告知，預約當日請勿異動或取消，以免影響您日後再預約的個人信用及難度。</li>
+                            <li>3. 為維護上課品質，請遵守 DOYOGA 各項參觀規定，未遵守規定者，本公司保留謝絕入館之權利。</li>
+                            <li>4. DOYOGA 保留修改預約須知之權利，修改後的條款將公佈於本網站上，不另外個別通知。如果您繼續在本網站進行參觀預約，就表示您已經了解、並同意遵守修改後的約定條款。</li>
+                        </ol>
+                        <div class="text-center"><a href="#" class="btn btn-primary-100 btn-primary-100-style d-block">繼續預約</a></div>
+                    </div>
+                </div>
+                <!-- Course First med level -->
+                <div class="card-course-level-style card-course-level position-relative">
+                    <a class="fs-3 text-white stretched-link" data-bs-toggle="collapse" href="#collapseCourseFirstMed" role="button" aria-expanded="false" aria-controls="collapseCourseFirstMed" >中階 Intermediate</a>
+                    <div class="d-flex align-items-center mb-3">
+                        <p class="text-white me-3">阿斯坦加、陰陽</p>
+                        <span class="rounded-4 bg-primary-200 px-3 py-1 fw-lighter fs-sm">60 min</span>
+                    </div>
+                    <ul>
+                        <li>・入體位法動作解說</li>
+                        <li>・瑜珈基礎動作、順位</li>
+                        <li>・適合任何階段練習者</li>
+                    </ul>
+                </div>
+                <div class="collapse" id="collapseCourseFirstMed">
+                    <div class="card card-body p-5 rounded-4">
+                        <p>你選擇的是</p>
+                        <h5 class="mb-5">首次體驗課程-中階</h5>
+                        <p class="fs-4 text-center mb-3">預約須知</p>
+                        <ol class="mb-5">
+                            <li>1. 如果有特殊體質、特殊狀況，請主動告知。</li>
+                            <li>2. 取消預約或時間異動請於預約日前一天晚間 21:00 前告知，預約當日請勿異動或取消，以免影響您日後再預約的個人信用及難度。</li>
+                            <li>3. 為維護上課品質，請遵守 DOYOGA 各項參觀規定，未遵守規定者，本公司保留謝絕入館之權利。</li>
+                            <li>4. DOYOGA 保留修改預約須知之權利，修改後的條款將公佈於本網站上，不另外個別通知。如果您繼續在本網站進行參觀預約，就表示您已經了解、並同意遵守修改後的約定條款。</li>
+                        </ol>
+                        <div class="text-center"><a href="#" class="btn btn-primary-100 btn-primary-100-style d-block">繼續預約</a></div>
+                    </div>
+                </div>
+                <!-- course First hight level -->
+                <div class="card-course-level-style card-course-level position-relative">
+                    <a class="fs-3 text-white stretched-link" data-bs-toggle="collapse" href="#collapseCourseFirstAdv" role="button" aria-expanded="false" aria-controls="collapseCourseFirstMed" >高階 Advanced</a>
+                    <div class="d-flex align-items-center mb-3">
+                        <p class="text-white me-3">艾揚格、哈達、寰宇</p>
+                        <span class="rounded-4 bg-primary-200 px-3 py-1 fw-lighter fs-sm">60 min</span>
+                    </div>
+                    <ul>
+                        <li>・入體位法動作解說</li>
+                        <li>・瑜珈基礎動作、順位</li>
+                        <li>・適合任何階段練習者</li>
+                    </ul>
+                </div>
+                <div class="collapse" id="collapseCourseFirstAdv">
+                    <div class="card card-body p-5 rounded-4">
+                        <p>你選擇的是</p>
+                        <h5 class="mb-5">首次體驗課程-高階</h5>
+                        <p class="fs-4 text-center mb-3">預約須知</p>
+                        <ol class="mb-5">
+                            <li>1. 如果有特殊體質、特殊狀況，請主動告知。</li>
+                            <li>2. 取消預約或時間異動請於預約日前一天晚間 21:00 前告知，預約當日請勿異動或取消，以免影響您日後再預約的個人信用及難度。</li>
+                            <li>3. 為維護上課品質，請遵守 DOYOGA 各項參觀規定，未遵守規定者，本公司保留謝絕入館之權利。</li>
+                            <li>4. DOYOGA 保留修改預約須知之權利，修改後的條款將公佈於本網站上，不另外個別通知。如果您繼續在本網站進行參觀預約，就表示您已經了解、並同意遵守修改後的約定條款。</li>
+                        </ol>
+                        <div class="text-center"><a href="#" class="btn btn-primary-100 btn-primary-100-style d-block">繼續預約</a></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+  </section>
+<!-- course first end -->
+<!-- course short-term -->
+  <section class="container my-8">
+    <div class="card card-course-column">
+        <img src="/yoga-1_vite_bs/assets/yoga-12-8d3e80ac.jpg" class="object-fit-cover card-img-top mb-3" alt="course2">
+        <div class="card-body px-5">
+          <h5 class="fs-4 card-title mb-1">短期體驗</h5>
+          <p class="fs-4 text-primary-100 text-center mb-2">NT $1800 / 月</p>
+          <p class="card-text">分基礎、中級、高級可以選擇。 <br>想試著培養瑜珈習慣者可以選擇此方案。</p>
+        </div>
+        <div class="p-5">
+            <a data-bs-toggle="collapse" href="#collapseCourseShortTerm" role="button" aria-expanded="false" aria-controls="collapseExample" class="d-block fs-4 btn btn-primary-100 btn-primary-100-style stretched-link">選擇課程</a>
+        </div>
+    </div>
+  </section>
+  <section class="bg-primary-200">
+    <div class="container">
+        <div class="collapse py-6" id="collapseCourseShortTerm">
+            <h3 class="text-white text-center fw-normal mb-5">選擇課程階級</h3>
+            <div class="d-flex flex-column gap-5">
+                <!-- course first base -->
+                <div class="card-course-level-style card-course-level position-relative">
+                    <a class="fs-3 text-white stretched-link" data-bs-toggle="collapse" href="#collapseCourseShortTermBasic" role="button" aria-expanded="false" aria-controls="collapseCourseShortTermBasic">基礎 Basic</a>
+                    <div class="d-flex align-items-center mb-3">
+                        <p class="text-white me-3">基礎課程</p>
+                        <span class="rounded-4 bg-primary-200 px-3 py-1 fw-lighter fs-sm">60 min</span>
+                    </div>
+                    <ul>
+                        <li>・入體位法動作解說</li>
+                        <li>・瑜珈基礎動作、順位</li>
+                        <li>・適合任何階段練習者</li>
+                    </ul>
+                </div>
+                <div class="collapse" id="collapseCourseShortTermBasic">
+                    <div class="card card-body p-5 rounded-4">
+                        <p>你選擇的是</p>
+                        <h5 class="mb-5">首次體驗課程-基礎</h5>
+                        <p class="fs-4 text-center mb-3">預約須知</p>
+                        <ol class="mb-5">
+                            <li>1. 如果有特殊體質、特殊狀況，請主動告知。</li>
+                            <li>2. 取消預約或時間異動請於預約日前一天晚間 21:00 前告知，預約當日請勿異動或取消，以免影響您日後再預約的個人信用及難度。</li>
+                            <li>3. 為維護上課品質，請遵守 DOYOGA 各項參觀規定，未遵守規定者，本公司保留謝絕入館之權利。</li>
+                            <li>4. DOYOGA 保留修改預約須知之權利，修改後的條款將公佈於本網站上，不另外個別通知。如果您繼續在本網站進行參觀預約，就表示您已經了解、並同意遵守修改後的約定條款。</li>
+                        </ol>
+                        <div class="text-center"><a href="#" class="btn btn-primary-100 btn-primary-100-style d-block">繼續預約</a></div>
+                    </div>
+                </div>
+                <!-- Course First med level -->
+                <div class="card-course-level-style card-course-level position-relative">
+                    <a class="fs-3 text-white stretched-link" data-bs-toggle="collapse" href="#collapseCourseShortTermMed" role="button" aria-expanded="false" aria-controls="collapseCourseShortTermMed" >中階 Intermediate</a>
+                    <div class="d-flex align-items-center mb-3">
+                        <p class="text-white me-3">阿斯坦加、陰陽</p>
+                        <span class="rounded-4 bg-primary-200 px-3 py-1 fw-lighter fs-sm">60 min</span>
+                    </div>
+                    <ul>
+                        <li>・入體位法動作解說</li>
+                        <li>・瑜珈基礎動作、順位</li>
+                        <li>・適合任何階段練習者</li>
+                    </ul>
+                </div>
+                <div class="collapse" id="collapseCourseShortTermMed">
+                    <div class="card card-body p-5 rounded-4">
+                        <p>你選擇的是</p>
+                        <h5 class="mb-5">首次體驗課程-中階</h5>
+                        <p class="fs-4 text-center mb-3">預約須知</p>
+                        <ol class="mb-5">
+                            <li>1. 如果有特殊體質、特殊狀況，請主動告知。</li>
+                            <li>2. 取消預約或時間異動請於預約日前一天晚間 21:00 前告知，預約當日請勿異動或取消，以免影響您日後再預約的個人信用及難度。</li>
+                            <li>3. 為維護上課品質，請遵守 DOYOGA 各項參觀規定，未遵守規定者，本公司保留謝絕入館之權利。</li>
+                            <li>4. DOYOGA 保留修改預約須知之權利，修改後的條款將公佈於本網站上，不另外個別通知。如果您繼續在本網站進行參觀預約，就表示您已經了解、並同意遵守修改後的約定條款。</li>
+                        </ol>
+                        <div class="text-center"><a href="#" class="btn btn-primary-100 btn-primary-100-style d-block">繼續預約</a></div>
+                    </div>
+                </div>
+                <!-- course First hight level -->
+                <div class="card-course-level-style card-course-level position-relative">
+                    <a class="fs-3 text-white stretched-link" data-bs-toggle="collapse" href="#collapseCourseShortTermAdv" role="button" aria-expanded="false" aria-controls="collapseCourseShortTermMed" >高階 Advanced</a>
+                    <div class="d-flex align-items-center mb-3">
+                        <p class="text-white me-3">艾揚格、哈達、寰宇</p>
+                        <span class="rounded-4 bg-primary-200 px-3 py-1 fw-lighter fs-sm">60 min</span>
+                    </div>
+                    <ul>
+                        <li>・入體位法動作解說</li>
+                        <li>・瑜珈基礎動作、順位</li>
+                        <li>・適合任何階段練習者</li>
+                    </ul>
+                </div>
+                <div class="collapse" id="collapseCourseShortTermAdv">
+                    <div class="card card-body p-5 rounded-4">
+                        <p>你選擇的是</p>
+                        <h5 class="mb-5">首次體驗課程-高階</h5>
+                        <p class="fs-4 text-center mb-3">預約須知</p>
+                        <ol class="mb-5">
+                            <li>1. 如果有特殊體質、特殊狀況，請主動告知。</li>
+                            <li>2. 取消預約或時間異動請於預約日前一天晚間 21:00 前告知，預約當日請勿異動或取消，以免影響您日後再預約的個人信用及難度。</li>
+                            <li>3. 為維護上課品質，請遵守 DOYOGA 各項參觀規定，未遵守規定者，本公司保留謝絕入館之權利。</li>
+                            <li>4. DOYOGA 保留修改預約須知之權利，修改後的條款將公佈於本網站上，不另外個別通知。如果您繼續在本網站進行參觀預約，就表示您已經了解、並同意遵守修改後的約定條款。</li>
+                        </ol>
+                        <div class="text-center"><a href="#" class="btn btn-primary-100 btn-primary-100-style d-block">繼續預約</a></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+  </section>
+<!-- course short-term end -->
+<!-- course Long-term -->
+  <section class="container my-8">
+    <div class="card card-course-column">
+        <img src="/yoga-1_vite_bs/assets/yoga-13-89d314b7.jpg" class="object-fit-cover card-img-top mb-3" alt="course3">
+        <div class="card-body px-5">
+          <h5 class="fs-4 card-title mb-1">長期體驗</h5>
+          <p class="fs-4 text-primary-100 text-center mb-2">NT $5600 / 季</p>
+          <p class="card-text">分基礎、中級、高級可以選擇。<br> 有長期習慣做瑜伽者建議選擇此方案。</p>
+        </div>
+        <div class="p-5">
+            <a data-bs-toggle="collapse" href="#collapseCourseLongTerm" role="button" aria-expanded="false" aria-controls="collapseExample" class="d-block fs-4 btn btn-primary-100 btn-primary-100-style stretched-link">選擇課程</a>
+        </div>
+      </div>
+  </section>
+  <section class="bg-primary-200">
+    <div class="container">
+        <div class="collapse py-6" id="collapseCourseLongTerm">
+            <h3 class="text-white text-center fw-normal mb-5">選擇課程階級</h3>
+            <div class="d-flex flex-column gap-5">
+                <!-- course first base -->
+                <div class="card-course-level-style card-course-level position-relative">
+                    <a class="fs-3 text-white stretched-link" data-bs-toggle="collapse" href="#collapseCourseLongTermBasic" role="button" aria-expanded="false" aria-controls="collapseCourseLongTermBasic">基礎 Basic</a>
+                    <div class="d-flex align-items-center mb-3">
+                        <p class="text-white me-3">基礎課程</p>
+                        <span class="rounded-4 bg-primary-200 px-3 py-1 fw-lighter fs-sm">60 min</span>
+                    </div>
+                    <ul>
+                        <li>・入體位法動作解說</li>
+                        <li>・瑜珈基礎動作、順位</li>
+                        <li>・適合任何階段練習者</li>
+                    </ul>
+                </div>
+                <div class="collapse" id="collapseCourseLongTermBasic">
+                    <div class="card card-body p-5 rounded-4">
+                        <p>你選擇的是</p>
+                        <h5 class="mb-5">首次體驗課程-基礎</h5>
+                        <p class="fs-4 text-center mb-3">預約須知</p>
+                        <ol class="mb-5">
+                            <li>1. 如果有特殊體質、特殊狀況，請主動告知。</li>
+                            <li>2. 取消預約或時間異動請於預約日前一天晚間 21:00 前告知，預約當日請勿異動或取消，以免影響您日後再預約的個人信用及難度。</li>
+                            <li>3. 為維護上課品質，請遵守 DOYOGA 各項參觀規定，未遵守規定者，本公司保留謝絕入館之權利。</li>
+                            <li>4. DOYOGA 保留修改預約須知之權利，修改後的條款將公佈於本網站上，不另外個別通知。如果您繼續在本網站進行參觀預約，就表示您已經了解、並同意遵守修改後的約定條款。</li>
+                        </ol>
+                        <div class="text-center"><a href="#" class="btn btn-primary-100 btn-primary-100-style d-block">繼續預約</a></div>
+                    </div>
+                </div>
+                <!-- Course First med level -->
+                <div class="card-course-level-style card-course-level position-relative">
+                    <a class="fs-3 text-white stretched-link" data-bs-toggle="collapse" href="#collapseCourseLongTermMed" role="button" aria-expanded="false" aria-controls="collapseCourseLongTermMed" >中階 Intermediate</a>
+                    <div class="d-flex align-items-center mb-3">
+                        <p class="text-white me-3">阿斯坦加、陰陽</p>
+                        <span class="rounded-4 bg-primary-200 px-3 py-1 fw-lighter fs-sm">60 min</span>
+                    </div>
+                    <ul>
+                        <li>・入體位法動作解說</li>
+                        <li>・瑜珈基礎動作、順位</li>
+                        <li>・適合任何階段練習者</li>
+                    </ul>
+                </div>
+                <div class="collapse" id="collapseCourseLongTermMed">
+                    <div class="card card-body p-5 rounded-4">
+                        <p>你選擇的是</p>
+                        <h5 class="mb-5">首次體驗課程-中階</h5>
+                        <p class="fs-4 text-center mb-3">預約須知</p>
+                        <ol class="mb-5">
+                            <li>1. 如果有特殊體質、特殊狀況，請主動告知。</li>
+                            <li>2. 取消預約或時間異動請於預約日前一天晚間 21:00 前告知，預約當日請勿異動或取消，以免影響您日後再預約的個人信用及難度。</li>
+                            <li>3. 為維護上課品質，請遵守 DOYOGA 各項參觀規定，未遵守規定者，本公司保留謝絕入館之權利。</li>
+                            <li>4. DOYOGA 保留修改預約須知之權利，修改後的條款將公佈於本網站上，不另外個別通知。如果您繼續在本網站進行參觀預約，就表示您已經了解、並同意遵守修改後的約定條款。</li>
+                        </ol>
+                        <div class="text-center"><a href="#" class="btn btn-primary-100 btn-primary-100-style d-block">繼續預約</a></div>
+                    </div>
+                </div>
+                <!-- course First hight level -->
+                <div class="card-course-level-style card-course-level position-relative">
+                    <a class="fs-3 text-white stretched-link" data-bs-toggle="collapse" href="#collapseCourseLongTermAdv" role="button" aria-expanded="false" aria-controls="collapseCourseLongTermMed" >高階 Advanced</a>
+                    <div class="d-flex align-items-center mb-3">
+                        <p class="text-white me-3">艾揚格、哈達、寰宇</p>
+                        <span class="rounded-4 bg-primary-200 px-3 py-1 fw-lighter fs-sm">60 min</span>
+                    </div>
+                    <ul>
+                        <li>・入體位法動作解說</li>
+                        <li>・瑜珈基礎動作、順位</li>
+                        <li>・適合任何階段練習者</li>
+                    </ul>
+                </div>
+                <div class="collapse" id="collapseCourseLongTermAdv">
+                    <div class="card card-body p-5 rounded-4">
+                        <p>你選擇的是</p>
+                        <h5 class="mb-5">首次體驗課程-高階</h5>
+                        <p class="fs-4 text-center mb-3">預約須知</p>
+                        <ol class="mb-5">
+                            <li>1. 如果有特殊體質、特殊狀況，請主動告知。</li>
+                            <li>2. 取消預約或時間異動請於預約日前一天晚間 21:00 前告知，預約當日請勿異動或取消，以免影響您日後再預約的個人信用及難度。</li>
+                            <li>3. 為維護上課品質，請遵守 DOYOGA 各項參觀規定，未遵守規定者，本公司保留謝絕入館之權利。</li>
+                            <li>4. DOYOGA 保留修改預約須知之權利，修改後的條款將公佈於本網站上，不另外個別通知。如果您繼續在本網站進行參觀預約，就表示您已經了解、並同意遵守修改後的約定條款。</li>
+                        </ol>
+                        <div class="text-center"><a href="#" class="btn btn-primary-100 btn-primary-100-style d-block">繼續預約</a></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+  </section>
+<!-- course Long-term end-->
+
+  
+
+  <footer class="bg-primary-200 py-5">
+    <div class="container">
+    <div class="d-md-flex justify-content-between align-items-center mb-md-5">
+        <h4 class="text-white mb-3 mb-md-0">現在訂閱，獲得課程優惠碼！</h4>
+        <div class="footer-form-email input-group mb-8 mb-md-0">
+            <input type="text" class="form-control text-primary-100 fs-5 py-2" placeholder="輸入您的電子信箱" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn bg-primary-100 text-white fs-5 px-3" type="button" id="button-addon2">訂閱</button>
+        </div>
+    </div>
+</div>
+<div class="border-bottom mb-8"></div>
+<div class="container">
+    <div class="d-flex justify-content-between mb-3">
+        <div>
+            <h1 class="mb-2"><a href="index.html"><img style="width: 100px;" src="data:image/png;base64,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" alt="doyoga-logo"></a></h1>
+            <ul class="d-flex flex-column gap-y-2">
+                <li><a class="text-white fw-light" href="#">課程介紹</a></li>
+                <li><a class="text-white fw-light" href="#">瑜珈空間</a></li>
+                <li><a class="text-white fw-light" href="#">當月課表</a></li>
+            </ul>
+        </div>
+        <ul class="d-flex gap-3">
+            <li><a href="#"><i class="bi bi-facebook fs-4 text-white"></i></a></li>
+            <li><a href="#"><i class="bi bi-instagram fs-4 text-white"></i></a></li>
+            <li><a href="#"><i class="bi bi-line fs-4 text-white"></i></a></li>
+        </ul>
+    </div>
+    <p class="text-white text-md-center">© 2021. All Rights Reserved.</p>
+</div>  </footer>
+  
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  
+</body>
+</html>
